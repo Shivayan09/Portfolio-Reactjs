@@ -11,17 +11,17 @@ const AnimatedText = ({ children }) => {
     const el = textRef.current;
 
     gsap.fromTo(el,
-      { y: 60, opacity: 0, filter: "blur(30px)" }, // initial
+      { y: 60, opacity: 0, filter: "blur(30px)" },
       {
         y: 0,
         opacity: 1,
         filter: "blur(0px)",
-        duration: 1,
+        duration: 1.4,
         ease: "power3.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 80%",
-          end: "top 30%",
+          start: "top bottom",
+          end: "bottom top",
           toggleActions: "play reverse play reverse",
         },
       }
