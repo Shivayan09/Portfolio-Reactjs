@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isDropdown, setDropdown] = useState(false);
 
   return (
-    <div className="pt-5 mb-10">
+    <div className="relative">
       <div className="fixed left-0 top-0 z-50">
         <Menu
           onClick={() => setDropdown(!isDropdown)}
@@ -19,9 +19,9 @@ const Navbar = () => {
           isDropdown ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setDropdown(false)}
-      ></div>
+      />
       <div
-        className={`fixed top-0 left-0 h-screen w-50 bg-white/10 z-40 transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 h-screen w-44 md:w-64 bg-white/10 z-40 transform transition-transform duration-300 ${
           isDropdown ? "translate-x-0" : "-translate-x-full"
         }`}
       >
